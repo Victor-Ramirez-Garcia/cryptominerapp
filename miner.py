@@ -1,7 +1,7 @@
 from flask import render_template
 from flask.views import MethodView
-from importFiles.block_creator import create_block
-from importFiles.mining import mining_block
+from block_creator import create_block
+from mining import mining_block
 
 class Miner(MethodView):
     def get(self):

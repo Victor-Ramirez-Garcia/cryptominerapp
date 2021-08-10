@@ -13,9 +13,9 @@ def block_reward():
 # Creates a fake transaction
 def create_fake_transaction():
     #Load list of framework names
-    with open(f'txt/first-names.txt') as f:
+    with open('txt/first-names.txt') as f:
         first_names = f.read().split('\n')
-    with open(f'txt/last-names.txt') as f:
+    with open('txt/last-names.txt') as f:
         last_names = f.read().split('\n')
     #creates random name
     name = str((first_names[random.randint(0, 199)] + ' ' +

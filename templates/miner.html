@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Wow I have setup the block for you!!!</h1>
+    <h1>Now you can start mining for VRC!!!</h1>
+    <h1>Find the correct nonce that starts the hash off with 3 zeros</h1>
+    <h1>Have fun!!!</h1>
+
+    <h1 style="font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">Transactions:</h1>
+
+    {% for transactions in list_of_transactions%}
+        <h2 id="transactions">{{ transactions }}</h2>
+    {% endfor %}
+
+    <h1 style="font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">Transaction list all together:</h1>
+    
+    <h2>{{ block_list }}</h2>
+
+    <h1 style="font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">Root Hash (Transaction list all hashed together using SHA256):</h1>
+
+    <h2>{{ root_hash }}</h2>    
+
+    <h1 style="font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">Nonce:</h1>
+    
+    <h2>{{ nonce }}</h2>
+    
+    <h1 style="font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">New transaction list all together:</h1>
+    
+    <h2>{{ new_block_list }}</h2>
+
+    <h1 style="font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">Hash:</h1>
+
+    <h2>{{ nonce_hash }}</h2>
+
+{% endblock %}

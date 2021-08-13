@@ -19,16 +19,22 @@
 
     <h2>{{ root_hash }}</h2>    
 
-    <h1 style="font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">Nonce:</h1>
-    
-    <h2>{{ nonce }}</h2>
-    
-    <h1 style="font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">New transaction list all together:</h1>
-    
-    <h2>{{ new_block_list }}</h2>
+    <div style="display: flex; justify-content: center;">
+        <button style="height: 5vh; font-size: 2vh; font-weight: bold; color: rgb(112, 112, 201);" onclick="start_mining(`{{ nonce }}`, `{{ new_block_list }}`, `{{ nonce_hash }}`)">Start Mining!</button>
+    </div>
 
-    <h1 style="font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">Hash:</h1>
+    <h1 id="h1_nonce" style="display: none; font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">Nonce:</h1>
+    
+    <h2 id="nonce"></h2>
+    
+    <h1 id="h1_new_block_list" style="display: none; font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">New transaction list all together:</h1>
+    
+    <h2 id="new_block_list"></h2>
 
-    <h2>{{ nonce_hash }}</h2>
+    <h1 id="h1_nonce_hash" style="display: none; font-size: 4.3vh; color: rgba(255, 0, 0, 0.685);">Secret Hash:</h1>
+
+    <h2 id="nonce_hash"></h2>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 {% endblock %}

@@ -19,8 +19,5 @@ def mining_block(block_list, root_hash):
         #Create an if statement:
         #if hash does not start off with 5 zeros    
         if nonce_hash.startswith("000") == True and nonce_hash < root_hash:
-            print("WOW you Actually did it!!!!")
             break
-        #else:
-            #print(number)
     return nonce, new_block_list, nonce_hash
